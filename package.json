@@ -1,8 +1,9 @@
 {
     "author": "Olivier Poitrey <rs@dailymotion.com>",
+    "author": "dalmate <dalmate@live.com>"
     "name": "pushd",
     "description": "Blazing fast multi-protocol mobile push notification service",
-    "version": "1.6.5",
+    "version": "1.7.5",
     "homepage": "https://github.com/rs/pushd",
     "keywords": [
         "push",
@@ -34,17 +35,19 @@
         "node": "~0.10.0"
     },
     "dependencies": {
-        "coffee-script": "~1.8.0",
         "apn": "1.7.3",
-        "c2dm": "1.2.1",
-        "node-gcm": "0.12.0",
-        "mpns": "2.1.0",
         "async": "~0.2.10",
-        "express": "~3.20.2",
         "body-parser": "~1.9.0",
+        "c2dm": "1.2.1",
+        "coffee-script": "~1.8.0",
+        "email-validator": "^2.0.3",
+        "express": "~3.20.2",
         "hiredis": "~0.4.1",
-        "redis": "~1.0.0",
+        "mpns": "2.1.0",
         "netmask": "~1.0.4",
+        "node-gcm": "0.12.0",
+        "nodemailer": "^4.6.4",
+        "redis": "~1.0.0",
         "winston": "~0.7.3",
         "wns": "git+https://github.com/futurice/wns.git#28bfe39a3be8c64f3d72b7c7a5cac77c049b137a"
     },

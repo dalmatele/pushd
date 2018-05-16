@@ -122,6 +122,9 @@ authorize = (realm) ->
             networks.push new Netmask(network)
         return (req, res, next) ->
             if remoteAddr = req.socket and (req.socket.remoteAddress or (req.socket.socket and req.socket.socket.remoteAddress))
+                #fix for ip v6
+                if remoteAddr == "::1"
+                  remoteAddr = "127.0.0.1"
                 for network in networks
                     if network.contains(remoteAddr)
                         next()

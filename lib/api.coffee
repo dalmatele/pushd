@@ -169,7 +169,7 @@ exports.setupRestApi = (app, createSubscriber, getEventFromId, authorize, testSu
             if not deleted
                 logger.error "No event #{req.event.name}"
             if deleted
-                res.send 204
+                res.send 204 #return no content for publisher
             else
                 res.send 404
 

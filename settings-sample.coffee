@@ -138,3 +138,13 @@ exports['logging'] = [
         options:
             level: 'info'
     ]
+
+# email configuraton
+exports["email"] =
+  enabled: yes
+  class: require("./lib/emailservices/email").PushServiceEmail
+  host: "smtp.gmail.com"
+  port: 465
+  username: "test@gmail.com"
+  password: "12345"
+  secure: true #only use with port 465

@@ -64,6 +64,7 @@ class Subscriber
                                     # save fields
                                     .hmset("subscriber:#{id}", fields)
                                     .exec (err, results) =>
+                                        logger.info(err);
                                         if results is null
                                             # Transction discarded due to a parallel creation of the watched subscriber key
                                             # Try again in order to get the peer created subscriber

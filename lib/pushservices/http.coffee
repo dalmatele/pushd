@@ -1,9 +1,11 @@
 http = require 'http'
 url = require 'url'
+logger = require 'winston'
 
 class PushServiceHTTP
     validateToken: (token) ->
         info = url.parse(token)
+        logger.info info
         if info?.protocol in ['http:', 'https:']
             return token
 
@@ -22,7 +24,7 @@ class PushServiceHTTP
                 title: payload.title
                 message: payload.msg
                 data: payload.data
-
+            #https://nodejs.org/api/http.html
             req = http.request(options)
 
             req.on 'error', (e) =>
